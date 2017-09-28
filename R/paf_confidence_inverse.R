@@ -49,14 +49,14 @@
 #' #Example 1: Exponential Relative Risk
 #' #--------------------------------------------
 #' set.seed(18427)
-#' X <- rnorm(100,0.3,.05)
+#' X <- as.data.frame(rnorm(100,0.3,.05))
 #' thetahat <- 0.4
 #' thetavar <- 0.1
 #' paf.confidence.inverse(X, thetahat, function(X, theta){exp(theta*X)}, thetavar)
 #' 
 #'
 #' #With approximate method
-#' Xmean <- mean(X)
+#' Xmean <- as.data.frame(mean(X[,1]))
 #' Xvar  <- var(X)
 #' paf.confidence.inverse(Xmean, thetahat, 
 #' function(X, theta){exp(theta*X)}, thetavar, Xvar = Xvar, method = "approximate")
@@ -70,14 +70,14 @@
 #' set.seed(18427)
 #' X1 <- rnorm(1000,0.3,.05)
 #' X2 <- rnorm(1000,0.3,.05)
-#' X  <- as.matrix(cbind(X1,X2))
+#' X  <- as.data.frame(as.matrix(cbind(X1,X2)))
 #' thetahat <- c(0.12, 0.03)
 #' thetavar <- matrix(c(0.1, 0, 0, 0.4), byrow = TRUE, nrow = 2)
 #' rr <- function(X, theta){exp(theta[1]*X[,1] + theta[2]*X[,2])}
 #' paf.confidence.inverse(X, thetahat, rr, thetavar) 
 #' 
 #' #Same example with approximate method
-#' Xmean    <- matrix(colMeans(X), ncol = 2)
+#' Xmean    <- as.data.frame(matrix(colMeans(X), ncol = 2))
 #' Xvar     <- cov(X)
 #'paf.confidence.inverse(Xmean, thetahat, rr=rr, thetavar = thetavar, 
 #'method = "approximate", Xvar = Xvar)

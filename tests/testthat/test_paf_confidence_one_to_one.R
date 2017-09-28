@@ -104,8 +104,7 @@ test_that("Checking paf.confidence.one2one",{
     rr       <- function(X,theta){exp(X*theta[1]*theta[2])}
     paf.confidence.one2one(X=Xmean, thetahat = thetahat, rr=rr, thetalow = thetalow,
                            thetaup = thetaup, method = "empirical") 
-    },
-  c("Lower_CI" = 0, "Point_Estimate" = 0, "Upper_CI" = 0))
+    }, c("Lower_CI" = 0, "Point_Estimate" = 0, "Upper_CI" = 0))
   
   
   expect_equal({

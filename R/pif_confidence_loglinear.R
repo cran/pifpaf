@@ -45,7 +45,7 @@
 #' #Example 1: Exponential Relative risk
 #' #--------------------------------------------
 #' set.seed(18427)
-#' X        <- rnorm(100,5,1)
+#' X        <- as.data.frame(rnorm(100,5,1))
 #' thetahat <- 0.4
 #' thetavar <- 0.1
 #' cft      <- function(X){sqrt(X)}
@@ -61,7 +61,7 @@
 #' set.seed(18427)
 #' X1        <- rnorm(100, 4,0.01)
 #' X2        <- runif(100,0.4,2)
-#' X         <- as.matrix(cbind(X1,X2))
+#' X         <- as.data.frame(cbind(X1,X2))
 #' thetahat  <- c(0.12, 0.03)
 #' thetavar  <- matrix(c(0.01, 0, 0, 0.04), byrow = TRUE, nrow = 2)
 #' rr        <- function(X, theta){

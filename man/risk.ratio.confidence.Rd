@@ -78,8 +78,8 @@ risk.ratio.confidence(X, thetahat, rr, thetavar)
 #Example 3: Categorical Relative Risk & Exposure
 #--------------------------------------------
 set.seed(18427)
-X        <- sample(c("Normal","Overweight","Obese"), 100, 
-                   replace = TRUE, prob = c(0.4, 0.1, 0.5))
+X        <- as.data.frame(sample(c("Normal","Overweight","Obese"), 100, 
+                   replace = TRUE, prob = c(0.4, 0.1, 0.5)))
 thetahat <- c(1, 1.2, 1.5)
 thetavar  <- diag(c(0.1, 0.2, 0.4))
 

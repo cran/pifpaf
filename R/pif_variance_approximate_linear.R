@@ -132,7 +132,7 @@ pif.variance.approximate.linear <- function(X, thetahat, rr, thetavar, Xvar,
     }
     
     #Estimate relative risks 
-    dR0 <- as.matrix(grad(rr.fun.x, .X, method = deriv.method,
+    dR0 <- as.matrix(grad(rr.fun.x, .X, method = as.vector(deriv.method)[1],
                           method.args = deriv.method.args))
     R0  <- rr.fun.x(.X)
     
@@ -141,7 +141,7 @@ pif.variance.approximate.linear <- function(X, thetahat, rr, thetavar, Xvar,
       dR1 <- 0
       R1  <- 1
     } else {
-      dR1 <- as.matrix(grad(rr.fun.cft, .X, method = deriv.method,
+      dR1 <- as.matrix(grad(rr.fun.cft, .X, method = as.vector(deriv.method)[1],
                             method.args = deriv.method.args))  
       R1  <- rr.fun.cft(.X)
     }

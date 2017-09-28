@@ -168,13 +168,13 @@ Xvar  <- var(X)
 
 paf(Xmean, thetahat, rr_better, method = "approximate", Xvar = Xvar)
 \dontrun{
-#Warning: $ operator in rr definitions don't work in approximate
+#Error: $ operator in rr definitions don't work in approximate
 paf(Xmean, thetahat, rr_not, method = "approximate", Xvar = Xvar)
 }
 
 
 \dontrun{
-#Warning: Multivariate cases cannot be evaluated with kernel method
+#Error: Multivariate cases cannot be evaluated with kernel method
 paf(X, thetahat, rr, method = "kernel") 
 }
 

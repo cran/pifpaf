@@ -122,10 +122,10 @@ counterfactual.plot.discrete <- function(X, cft,
                                 x_axis_order = unique(X[,1])){
   
   #Set X as matrix
-  .X  <- as.data.frame(X)
+  .X           <- as.data.frame(X)
   colnames(.X) <- colnames(X)
-  .cX <- data.frame(cft(.X), rep(dnames[2], nrow(.X)))
-  .X  <- data.frame(.X, rep(dnames[1], nrow(.X)))
+  .cX          <- data.frame(cft(.X), rep(dnames[2], nrow(.X)))
+  .X           <- data.frame(.X, rep(dnames[1], nrow(.X)))
   
   colnames(.X) <- c(colnames(X)[1],"Distribution")
   colnames(.cX) <- c(colnames(X)[1],"Distribution")

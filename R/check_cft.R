@@ -33,7 +33,7 @@
 
 check.cft <- function(cft, X){
   
-  #Convert to matrix
+  #Convert to data frame
   .X <- as.data.frame(X)
   
   #Check rows and columns

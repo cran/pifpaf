@@ -205,7 +205,7 @@ method = "approximate", Xvar = Xvar)
 }
 
 \dontrun{
-#Warning: $ operator in rr definitions don't work in approximate
+#Error: $ operator in rr definitions don't work in approximate
 pif.confidence(Xmean, thetahat, rr_not, thetavar, cft, method = "approximate", Xvar = Xvar)
 }
 
